@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <title>React-Chakra</title>
+</head>
+
+<body>
+  <!-- نمودار میله ای -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <div id="root"></div>
+
+  <!-- نمودار میله ای -->
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['تسک های حذف شده', 'تسک های کامل شده', 'تسک های ایجاد شده'],
+        datasets: [{
+          data: [12, 19, 3,],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+  <!-- نمودار میله ای -->
+
+</body>
+
+</html>
